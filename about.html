@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Women Advocacy</title>
+  <link rel="stylesheet" type="text/css" href="about.css"/>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  </head>
+  <body>
+    
+  <ul>
+    <li class="active"><a href="about.html">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Advocacy</a></li>
+    <li><a href="#">Donate</a></li>
+    <li><a href="#">Contact Us</a></li>
+    <li>
+</ul>
+<br><br><br>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="slide1.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="slide2.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="slide4.jpg" style="width:100%;">
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<div class="about-section">
+  <h1>About Us</h1>
+  <br>
+  <p>Our advocacy harnesses the most rigorous and compelling evidence to show that investing in girls, 
+    women, and gender equality is not only the right thing to do, but also the smart thing to do. </p> 
+    <p>We call for more attention to overlooked topics and partner to generate new evidence. </p>
+   <p>Moreover, we focus on what works, using advocacy grounded in evidence to shift policies and drive investments.</p>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<section>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="matei.jpeg" alt="matei" style="width:100%">
+      <br>
+      <div class="container">
+        <h2>Mark Matei</h2>
+        <p class="title">CEO & Founder</p>
+        <p>Heart towards building a better life for everyone</p>
+        <p>mmatei@womenadvoc.com</p>
+        <br>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="kaihuri.jpeg" alt="kaihuri" style="width:100%;">
+      <br>
+      <div class="container">
+        <h2>Michelle Kaihuri</h2>
+        <p class="title">Art Director</p>
+        <p>I Love people</p>
+        <p>mkaihuri@womenadvoc.com</p>
+        <br>
+        <p><button class="button">Contact</button></p>
+        
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="flora.jpeg" alt="Flora" style="width:100%">
+      <br>
+      <div class="container">
+        <h2>Flora Wendmalgdo</h2>
+        <p class="title">UN Representative</p>
+        <p>Advisor and representative</p>
+        <p>fwendmalgdo@womenadvoc.com</p>
+        <br>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<div class="container">
+  <div style="text-align:center">
+    <h2>Contact Us</h2>
+    <p>Any further questions? Leave us a message:</p>
+  </div>
+  <div class="row">
+    <div class="column">
+      <img src="map.jpg" style="width:100%">
+    </div>
+    <div class="columns">
+      <form action="/action_page.php">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="kenya">Kenya</option>
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select>
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" placeholder="Your email..">
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html> 
+
+    
+
+
+
+
+<form action="contact.php" method="post">
+  <div class="form-group">
+  <label for="fname">First Name</label>
+  <input type="text" class="form-control" id="fname" name="fname" placeholder="Your first Name..."
+  oninvalid="this.setCustomValidity('Please Enter Your First Name')" oninput="setCustomValidity('')" required>
+  <label for="lname">Last Name</label>
+  <input type="text" class="form-control" id="lname" name="lname" placeholder="Your last Name..."
+  oninvalid="this.setCustomValidity('Please Enter Your Last Name')" oninput="setCustomValidity('')" required>
+  <label for="country">Country</label>
+  <select id="country" name="country"  oninvalid="this.setCustomValidity('Choose Country')" oninput="setCustomValidity('')"required>
+    <option value="kenya">Kenya</option>
+    <option value="australia">Australia</option>
+    <option value="canada">Canada</option>
+    <option value="usa">USA</option>
+  </select>
+  <label for="email">Email</label>
+  <input type="email" class="form-control" id="email" name="email" placeholder="Your Email..." oninvalid="this.setCustomValidity('Please Enter valid email')" oninput="setCustomValidity('')"required>
+
+  <label for="subject">Subject</label>
+  <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+  <input type="submit" value="Submit">
+</form>
